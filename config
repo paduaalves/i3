@@ -38,7 +38,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 #bindsym $mod+space exec --no-startup-id bash  $HOME/.config/polybar/forest/scripts/launcher.sh
-bindsym $mod+space exec --no-startup-id $HOME/.config/polybar/forest/scripts/launcher.sh
+bindsym $mod+space exec --no-startup-id $HOME/.config/polybar/shapes/scripts/launcher.sh
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
@@ -59,15 +59,16 @@ bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+F2 exec firefox
+bindsym $mod+F2 exec brave
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F4 exec code
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+p exec --no-startup-id picom --experimental-backends
 
 # start picom compositor
-#exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom --experimental-backends
 
 # start numlock
 exec --no-startup-id numlockx
@@ -222,7 +223,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+0 exec --no-startup-id bash "$HOME/.config/polybar/forest/scripts/powermenu.sh"
+bindsym $mod+0 exec --no-startup-id bash "$HOME/.config/polybar/shapes/scripts/powermenu.sh"
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -252,7 +253,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-scale /home/padua/Pictures/wallpapers/arc_wallpaper.png
+exec --no-startup-id feh --bg-scale /home/padua/Pictures/wallpapers/road.jpg
 exec --no-startup-id bash .config/polybar/launch.sh --forest
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
@@ -395,7 +396,7 @@ mode "$mode_gaps_outer" {
 }
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #5294E2 #ffffff #2e9ef4
+client.focused          #4c7899 #8fbcbb #ffffff #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
